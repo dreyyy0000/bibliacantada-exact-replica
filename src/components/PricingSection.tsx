@@ -1,3 +1,5 @@
+import DynamicDate from "./DynamicDate";
+
 const PricingSection = () => {
   return (
     <section className="py-12 px-4" id="checkout">
@@ -29,10 +31,7 @@ const PricingSection = () => {
           </p>
 
           <div className="bg-gold/20 rounded-lg p-4 mb-6">
-            <p className="text-gold text-sm uppercase tracking-wide mb-1">
-              Somente ATÉ hoje
-            </p>
-            <p className="text-foreground text-lg font-semibold">29/12/2025</p>
+            <DynamicDate />
           </div>
 
           <p className="text-muted-foreground text-sm mb-2">por apenas:</p>

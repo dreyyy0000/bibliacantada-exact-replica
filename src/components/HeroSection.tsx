@@ -12,9 +12,11 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Logo */}
+      {/* Logo - Premium Typography */}
       <div className="mb-8">
-        <p className="text-foreground text-lg tracking-wide">Bíblia Viva</p>
+        <p className="font-cormorant text-2xl md:text-3xl font-medium tracking-wide text-foreground italic">
+          Bíblia Viva
+        </p>
       </div>
 
       {/* Main Headline */}
