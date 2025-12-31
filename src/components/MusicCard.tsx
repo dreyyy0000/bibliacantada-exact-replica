@@ -5,8 +5,11 @@ interface MusicCardProps {
   image: string;
   title: string;
   duration: string;
-  audioSrc?: string;
+  audioSrc: string;
 }
+
+// Global audio manager to ensure only one audio plays at a time
+let currentlyPlaying: HTMLAudioElement | null = null;
 
 const MusicCard = ({ image, title, duration, audioSrc }: MusicCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,16 +18,45 @@ const MusicCard = ({ image, title, duration, audioSrc }: MusicCardProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Create audio element
-    audioRef.current = new Audio();
-    
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
+    const audio = new Audio(audioSrc);
+    audioRef.current = audio;
+
+    const handleTimeUpdate = () => {
+      if (audio.duration) {
+        setCurrentTime(formatTime(audio.currentTime));
+        setProgress((audio.currentTime / audio.duration) * 100);
       }
     };
-  }, []);
+
+    const handleEnded = () => {
+      setIsPlaying(false);
+      setCurrentTime("0:00");
+      setProgress(0);
+      currentlyPlaying = null;
+    };
+
+    const handlePlay = () => {
+      setIsPlaying(true);
+    };
+
+    const handlePause = () => {
+      setIsPlaying(false);
+    };
+
+    audio.addEventListener("timeupdate", handleTimeUpdate);
+    audio.addEventListener("ended", handleEnded);
+    audio.addEventListener("play", handlePlay);
+    audio.addEventListener("pause", handlePause);
+
+    return () => {
+      audio.removeEventListener("timeupdate", handleTimeUpdate);
+      audio.removeEventListener("ended", handleEnded);
+      audio.removeEventListener("play", handlePlay);
+      audio.removeEventListener("pause", handlePause);
+      audio.pause();
+      audioRef.current = null;
+    };
+  }, [audioSrc]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -37,44 +69,16 @@ const MusicCard = ({ image, title, duration, audioSrc }: MusicCardProps) => {
 
     if (isPlaying) {
       audioRef.current.pause();
-      setIsPlaying(false);
+      currentlyPlaying = null;
     } else {
-      // For demo purposes, we simulate playback since we don't have actual audio files
-      setIsPlaying(true);
-      
-      // Simulate progress
-      const totalSeconds = parseDuration(duration);
-      let elapsed = 0;
-      
-      const interval = setInterval(() => {
-        elapsed += 1;
-        if (elapsed >= totalSeconds) {
-          setIsPlaying(false);
-          setCurrentTime("0:00");
-          setProgress(0);
-          clearInterval(interval);
-        } else {
-          setCurrentTime(formatTime(elapsed));
-          setProgress((elapsed / totalSeconds) * 100);
-        }
-      }, 1000);
-
-      // Store interval for cleanup
-      audioRef.current.dataset.intervalId = String(interval);
+      // Pause any currently playing audio
+      if (currentlyPlaying && currentlyPlaying !== audioRef.current) {
+        currentlyPlaying.pause();
+      }
+      audioRef.current.play();
+      currentlyPlaying = audioRef.current;
     }
   };
-
-  const parseDuration = (dur: string) => {
-    const [mins, secs] = dur.split(":").map(Number);
-    return mins * 60 + secs;
-  };
-
-  // Stop simulation when pausing
-  useEffect(() => {
-    if (!isPlaying && audioRef.current?.dataset.intervalId) {
-      clearInterval(Number(audioRef.current.dataset.intervalId));
-    }
-  }, [isPlaying]);
 
   return (
     <div className="music-card">
