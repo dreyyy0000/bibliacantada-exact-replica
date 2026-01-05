@@ -27,7 +27,7 @@ const PricingSection = () => {
           <p className="text-muted-foreground text-sm mb-4">+ bônus separadamente:</p>
           
           <p className="text-muted-foreground text-2xl line-through mb-6">
-            R$ 199,00
+            R$ 299,00
           </p>
 
           <div className="bg-gold/20 rounded-lg p-4 mb-6">
@@ -37,7 +37,7 @@ const PricingSection = () => {
           <p className="text-muted-foreground text-sm mb-2">por apenas:</p>
           
           <p className="text-5xl md:text-6xl font-bold gold-text mb-4">
-            R$ 19,90
+            R$ 29,90
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-6 text-sm text-muted-foreground">
