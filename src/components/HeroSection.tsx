@@ -1,14 +1,18 @@
+import headerBible from "@/assets/header-bible.jpg";
+
 const HeroSection = () => {
   return (
     <section className="pt-8 pb-12 px-4 text-center">
-      {/* Logo */}
+      {/* Logo with Bible Image */}
       <div className="mb-8">
-        <h2 className="font-cormorant text-3xl md:text-4xl font-semibold tracking-wide text-foreground">
-          A BÍBLIA
+        <img 
+          src={headerBible} 
+          alt="Bíblia aberta com luz divina" 
+          className="w-48 md:w-64 mx-auto mb-4 rounded-lg shadow-lg"
+        />
+        <h2 className="font-cormorant text-3xl md:text-4xl font-semibold italic text-gold tracking-wide">
+          Bíblia Viva
         </h2>
-        <p className="font-cormorant text-lg md:text-xl text-gold tracking-widest">
-          EM MÚSICA
-        </p>
       </div>
 
       {/* Main Headline */}
