@@ -10,7 +10,7 @@ const HeroSection = () => {
           alt="Bíblia aberta com luz divina" 
           className="w-48 md:w-64 mx-auto mb-4 rounded-lg shadow-lg"
         />
-        <h2 className="font-cormorant text-3xl md:text-4xl font-semibold italic text-gold tracking-wide">
+        <h2 className="font-cormorant text-3xl md:text-4xl font-semibold italic text-foreground tracking-wide">
           Bíblia Viva
         </h2>
       </div>
