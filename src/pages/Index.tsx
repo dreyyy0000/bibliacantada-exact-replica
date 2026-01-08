@@ -4,7 +4,9 @@ import CTAButton from "@/components/CTAButton";
 import IntroSection from "@/components/IntroSection";
 import CollectionPreview from "@/components/CollectionPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import BenefitsSection from "@/components/BenefitsSection";
+import AccessSection from "@/components/AccessSection";
+import CanteAdoreSection from "@/components/CanteAdoreSection";
+import NewConnectionSection from "@/components/NewConnectionSection";
 import WhatYouGetSection from "@/components/WhatYouGetSection";
 import BonusSection from "@/components/BonusSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -26,7 +28,9 @@ const Index = () => {
       <IntroSection />
       <CollectionPreview />
       <TestimonialsSection />
-      <BenefitsSection />
+      <AccessSection />
+      <CanteAdoreSection />
+      <NewConnectionSection />
       <WhatYouGetSection />
       <BonusSection />
       <GuaranteeSection />
