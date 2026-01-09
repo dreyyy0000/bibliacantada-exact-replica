@@ -1,10 +1,23 @@
 import { Check } from "lucide-react";
+import pergaminhoEscrituras from "@/assets/pergaminho-escrituras.png";
 
 const features = [
-  "Musical e inspirador: Canções devocionais que tocam a alma e criam um ambiente de adoração.",
-  "Fiel às Escrituras: Todas as letras foram baseadas diretamente no texto bíblico, em forma poética e fiel.",
-  "Didático e meditativo: Ajuda a memorizar versículos e aplicar os ensinamentos no dia a dia.",
-  "Conexão profunda: Permite que você viva a Palavra com emoção, entendimento e fé genuína.",
+  {
+    title: "Musical e inspirador",
+    description: "Canções devocionais que tocam a alma e criam um ambiente de adoração."
+  },
+  {
+    title: "Fiel às Escrituras",
+    description: "Todas as letras foram baseadas diretamente no texto bíblico, em forma poética e fiel."
+  },
+  {
+    title: "Didático e meditativo",
+    description: "Ajuda a memorizar versículos e aplicar os ensinamentos no dia a dia."
+  },
+  {
+    title: "Conexão profunda",
+    description: "Permite que você viva a Palavra com emoção, entendimento e fé genuína."
+  },
 ];
 
 const idealFor = [
@@ -19,36 +32,40 @@ const idealFor = [
 const NewConnectionSection = () => {
   return (
     <section className="py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-center text-foreground text-xl md:text-2xl font-semibold mb-8">
-          Uma nova forma de se conectar com a palavra de Deus:
+      <div className="max-w-md mx-auto">
+        <h2 className="text-center text-foreground text-xl md:text-2xl mb-8">
+          Uma nova forma de se conectar <span className="gold-text font-bold">com a palavra de Deus:</span>
         </h2>
 
         <div className="space-y-4 mb-10">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <Check className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-              <p className="text-foreground text-base">
-                <span className="font-semibold">{feature.split(":")[0]}:</span>
-                {feature.split(":")[1]}
+            <div key={index} className="bg-[#3d2a1a] rounded-xl p-4">
+              <p className="text-white text-sm">
+                <span className="text-[#c8a45a] font-semibold underline">{feature.title}:</span>{" "}
+                {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="text-muted-foreground text-base text-center mb-8">
-          Cada projeto foi cuidadosamente desenvolvido com base nas Escrituras Sagradas, traduzindo a sabedoria e o amor de Deus em músicas que transformam o ambiente e tocam o coração.
-        </p>
+        {/* Imagem do pergaminho */}
+        <div className="my-10">
+          <img 
+            src={pergaminhoEscrituras} 
+            alt="Cada projeto foi cuidadosamente desenvolvido com base nas Escrituras Sagradas" 
+            className="w-full h-auto"
+          />
+        </div>
 
         <h3 className="text-center text-foreground text-lg font-semibold mb-6">
           Ideal para quem deseja:
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+        <div className="space-y-3 mb-8">
           {idealFor.map((item, index) => (
             <div key={index} className="flex items-start gap-3">
               <Check className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-              <p className="text-foreground text-base">{item}</p>
+              <p className="text-foreground text-sm">{item}</p>
             </div>
           ))}
         </div>
