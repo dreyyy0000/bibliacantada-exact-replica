@@ -72,7 +72,7 @@ const NewConnectionSection = () => {
 
         <div className="text-center">
           <a
-            href="#checkout"
+            href="https://ambienteseguro.org.ua/c/f3351a172d"
             className="btn-cta inline-block text-sm md:text-base"
           >
             Quero acessar a Bíblia em Música agora
