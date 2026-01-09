@@ -13,7 +13,7 @@ const CollectionPreview = () => {
         </div>
         <div className="text-center">
           <a
-            href="https://ambienteseguro.org.ua/c/f3351a172d"
+            href="#checkout"
             className="btn-cta inline-block text-sm md:text-base"
           >
             Quero acessar a Bíblia em Música agora
