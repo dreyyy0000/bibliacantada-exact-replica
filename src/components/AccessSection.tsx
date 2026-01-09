@@ -132,48 +132,37 @@ const AccessSection = () => {
           A Bíblia em Música reúne as principais coleções devocionais da Bíblia em um só lugar — um material exclusivo, criado para te guiar em uma imersão espiritual sonora completa.
         </p>
 
-        {/* Imagem com apenas "CANTE E ADORE!" sobreposto */}
-        <div className="relative rounded-t-3xl overflow-hidden">
+        {/* Imagem com todo o texto sobreposto */}
+        <div className="relative overflow-hidden">
           <img 
             src={canteAdoreBg} 
             alt="Casal adorando com fones de ouvido" 
             className="w-full h-auto"
           />
           
-          {/* Apenas título sobreposto na parte inferior da imagem */}
-          <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
-            <h4 className="text-[#c8e600] text-2xl font-bold">
+          {/* Todo o conteúdo sobreposto na imagem */}
+          <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-t from-black/95 via-black/70 to-transparent px-4 pt-24">
+            <h4 className="text-[#c8e600] text-2xl font-bold mb-6 text-left">
               CANTE E<br />ADORE!
             </h4>
+            
+            <div className="text-left text-white text-sm leading-relaxed space-y-4">
+              <p>A Bíblia não é apenas um livro antigo!</p>
+              
+              <p>É uma fonte viva de sabedoria, consolo e direção.</p>
+              
+              <p>E agora, você pode experimentá-la em forma de canção, com cada palavra transformada em louvor e cada ensinamento em melodia.</p>
+              
+              <p>Você vai ouvir, cantar e viver as Escrituras.</p>
+              
+              <p>Uma jornada que começa nos Salmos e termina na ressurreição de Cristo.</p>
+            </div>
           </div>
-        </div>
-
-        {/* Textos abaixo da imagem */}
-        <div className="bg-background text-center space-y-4 py-6">
-          <p className="text-white text-sm">
-            A Bíblia não é apenas um livro antigo!
-          </p>
-          
-          <p className="text-white text-sm">
-            É uma fonte viva de sabedoria, consolo e direção.
-          </p>
-          
-          <p className="text-white text-sm">
-            E agora, você pode experimentá-la em forma de canção, com cada palavra transformada em louvor e cada ensinamento em melodia.
-          </p>
-          
-          <p className="text-white text-sm">
-            Você vai ouvir, cantar e viver as Escrituras.
-          </p>
-          
-          <p className="text-white text-sm">
-            Uma jornada que começa nos Salmos e termina na ressurreição de Cristo.
-          </p>
         </div>
 
         <a
           href="#checkout"
-          className="btn-cta inline-block text-sm md:text-base"
+          className="btn-cta inline-block text-sm md:text-base mt-6"
         >
           Quero acessar a Bíblia em Música agora
         </a>
