@@ -132,39 +132,13 @@ const AccessSection = () => {
           A Bíblia em Música reúne as principais coleções devocionais da Bíblia em um só lugar — um material exclusivo, criado para te guiar em uma imersão espiritual sonora completa.
         </p>
 
-        {/* Imagem com texto sobreposto */}
-        <div className="relative overflow-hidden" style={{ maxHeight: '650px' }}>
+        {/* Imagem do casal */}
+        <div className="overflow-hidden" style={{ maxHeight: '400px' }}>
           <img 
             src={canteAdoreBg} 
             alt="Casal adorando com fones de ouvido" 
             className="w-full h-full object-cover object-top"
           />
-          
-          {/* Gradiente e texto sobreposto */}
-          <div className="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-b from-black/0 via-black/40 to-black/0 px-6 pb-6">
-            <h4 className="text-white text-3xl font-bold mb-6 text-center tracking-wide">
-              CANTE E<br />ADORE!
-            </h4>
-            
-            <div className="text-center text-white text-sm leading-relaxed space-y-4 font-light">
-              <p>A Bíblia não é apenas um livro antigo!</p>
-              
-              <p>É uma fonte viva de sabedoria, consolo e direção.</p>
-              
-              <p>E agora, você pode experimentá-la em forma de<br />canção, com cada palavra transformada em louvor e<br />cada ensinamento em melodia.</p>
-              
-              <p>Você vai ouvir, cantar e viver as Escrituras.</p>
-              
-              <p>Uma jornada que começa nos Salmos e termina na<br />ressurreição de Cristo.</p>
-            </div>
-            
-            <a
-              href="#checkout"
-              className="btn-cta inline-block text-sm md:text-base mt-6"
-            >
-              Quero acessar a Bíblia em Música agora
-            </a>
-          </div>
         </div>
       </div>
     </section>
