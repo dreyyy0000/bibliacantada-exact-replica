@@ -157,15 +157,15 @@ const AccessSection = () => {
               
               <p>Uma jornada que começa nos Salmos e termina na<br />ressurreição de Cristo.</p>
             </div>
+            
+            <a
+              href="#checkout"
+              className="btn-cta inline-block text-sm md:text-base mt-6"
+            >
+              Quero acessar a Bíblia em Música agora
+            </a>
           </div>
         </div>
-
-        <a
-          href="#checkout"
-          className="btn-cta inline-block text-sm md:text-base mt-6"
-        >
-          Quero acessar a Bíblia em Música agora
-        </a>
       </div>
     </section>
   );
