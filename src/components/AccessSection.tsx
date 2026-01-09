@@ -5,19 +5,19 @@ const collections = [
     icon: Music,
     title: "150 Salmos em Música",
     description: "Músicas inspiradas em todos os Salmos, compostas com base no texto bíblico, para fortalecer a fé, trazer paz e renovar a esperança.",
-    variant: "dark" as const,
+    variant: "cream" as const,
   },
   {
     icon: Mail,
     title: "Todas as Cartas de Paulo em Música",
     description: "70 canções devocionais com os ensinamentos do apóstolo Paulo, traduzindo seus conselhos, exortações e revelações em melodias poderosas.",
-    variant: "light" as const,
+    variant: "brown" as const,
   },
   {
     icon: BookOpen,
     title: "Provérbios em Música",
     description: "31 canções sobre sabedoria, discernimento e decisões guiadas por Deus — um capítulo em cada música, com aplicação prática para a vida.",
-    variant: "dark" as const,
+    variant: "orange" as const,
   },
   {
     icon: BookMarked,
@@ -27,47 +27,68 @@ const collections = [
   },
 ];
 
-const getCardStyles = (variant: "dark" | "light" | "gold") => {
+const getCardStyles = (variant: "cream" | "brown" | "orange" | "gold") => {
   switch (variant) {
-    case "dark":
-      return "bg-[#5c3d2e]";
-    case "light":
-      return "bg-[#f5efe6]";
+    case "cream":
+      return "bg-[#e8e0d5]";
+    case "brown":
+      return "bg-[#6b3a0a]";
+    case "orange":
+      return "bg-[#b5710d]";
     case "gold":
-      return "bg-[#d4a84b]";
+      return "bg-[#d9a41e]";
   }
 };
 
-const getIconStyles = (variant: "dark" | "light" | "gold") => {
+const getIconBgStyles = (variant: "cream" | "brown" | "orange" | "gold") => {
   switch (variant) {
-    case "dark":
-      return "text-[#d4a84b]";
-    case "light":
-      return "text-[#5c3d2e]";
+    case "cream":
+      return "bg-[#d9a41e]";
+    case "brown":
+      return "bg-[#e8e0d5]";
+    case "orange":
+      return "bg-[#6b3a0a]";
     case "gold":
-      return "text-[#5c3d2e]";
+      return "bg-[#6b3a0a]";
   }
 };
 
-const getTitleStyles = (variant: "dark" | "light" | "gold") => {
+const getIconStyles = (variant: "cream" | "brown" | "orange" | "gold") => {
   switch (variant) {
-    case "dark":
-      return "text-[#d4a84b]";
-    case "light":
-      return "text-[#5c3d2e]";
+    case "cream":
+      return "text-[#6b3a0a]";
+    case "brown":
+      return "text-[#6b3a0a]";
+    case "orange":
+      return "text-[#e8e0d5]";
     case "gold":
-      return "text-[#5c3d2e]";
+      return "text-[#e8e0d5]";
   }
 };
 
-const getTextStyles = (variant: "dark" | "light" | "gold") => {
+const getTitleStyles = (variant: "cream" | "brown" | "orange" | "gold") => {
   switch (variant) {
-    case "dark":
-      return "text-[#f5efe6]";
-    case "light":
-      return "text-[#5c3d2e]";
+    case "cream":
+      return "text-[#6b3a0a]";
+    case "brown":
+      return "text-[#d9a41e]";
+    case "orange":
+      return "text-[#6b3a0a]";
     case "gold":
-      return "text-[#5c3d2e]";
+      return "text-[#6b3a0a]";
+  }
+};
+
+const getTextStyles = (variant: "cream" | "brown" | "orange" | "gold") => {
+  switch (variant) {
+    case "cream":
+      return "text-[#6b3a0a]";
+    case "brown":
+      return "text-[#e8e0d5]";
+    case "orange":
+      return "text-[#6b3a0a]";
+    case "gold":
+      return "text-[#6b3a0a]";
   }
 };
 
@@ -84,8 +105,8 @@ const AccessSection = () => {
             key={index}
             className={`rounded-2xl p-5 ${getCardStyles(collection.variant)}`}
           >
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${collection.variant === 'dark' ? 'bg-[#d4a84b]' : collection.variant === 'light' ? 'bg-[#5c3d2e]' : 'bg-[#5c3d2e]'}`}>
-              <collection.icon className={`w-5 h-5 ${collection.variant === 'dark' ? 'text-[#5c3d2e]' : 'text-[#f5efe6]'}`} />
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${getIconBgStyles(collection.variant)}`}>
+              <collection.icon className={`w-5 h-5 ${getIconStyles(collection.variant)}`} />
             </div>
             <h3 className={`font-bold text-base leading-tight mb-2 ${getTitleStyles(collection.variant)}`}>
               {collection.title}
