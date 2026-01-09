@@ -1,4 +1,11 @@
+import { smoothScrollTo } from "@/hooks/useSmoothScroll";
+
 const CanteAdoreSection = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    smoothScrollTo("checkout", 1800);
+  };
+
   return (
     <section className="py-12 px-4">
       <div className="max-w-3xl mx-auto text-center">
@@ -28,6 +35,7 @@ const CanteAdoreSection = () => {
 
         <a
           href="#checkout"
+          onClick={handleClick}
           className="btn-cta inline-block mt-8 text-sm md:text-base"
         >
           Quero acessar a Bíblia em Música agora

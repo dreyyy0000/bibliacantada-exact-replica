@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import pergaminhoEscrituras from "@/assets/pergaminho-escrituras.png";
+import { smoothScrollTo } from "@/hooks/useSmoothScroll";
 
 const features = [
   {
@@ -30,6 +31,11 @@ const idealFor = [
 ];
 
 const NewConnectionSection = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    smoothScrollTo("checkout", 1800);
+  };
+
   return (
     <section className="py-12 px-4">
       <div className="max-w-md mx-auto">
@@ -73,6 +79,7 @@ const NewConnectionSection = () => {
         <div className="text-center">
           <a
             href="#checkout"
+            onClick={handleClick}
             className="btn-cta inline-block text-sm md:text-base"
           >
             Quero acessar a Bíblia em Música agora
