@@ -132,12 +132,11 @@ const AccessSection = () => {
           A Bíblia em Música reúne as principais coleções devocionais da Bíblia em um só lugar — um material exclusivo, criado para te guiar em uma imersão espiritual sonora completa.
         </p>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden" style={{ maxHeight: '650px' }}>
           <img 
             src={canteAdoreBg} 
             alt="Casal adorando com fones de ouvido" 
-            className="w-full h-auto object-cover object-top"
-            style={{ marginTop: '-100px', marginBottom: '-150px' }}
+            className="w-full h-full object-cover object-top"
           />
           
           {/* Gradiente e texto sobreposto - alinhado ao final da imagem */}
