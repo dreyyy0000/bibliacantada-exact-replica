@@ -1,6 +1,6 @@
 import { Music, Mail, BookOpen, BookMarked } from "lucide-react";
 import iconExclamation from "@/assets/icon-exclamation.svg";
-import canteAdoreComplete from "@/assets/cante-adore-complete.png";
+import canteAdoreBg from "@/assets/cante-adore-bg.webp";
 
 const collections = [
   {
@@ -132,12 +132,33 @@ const AccessSection = () => {
           A Bíblia em Música reúne as principais coleções devocionais da Bíblia em um só lugar — um material exclusivo, criado para te guiar em uma imersão espiritual sonora completa.
         </p>
 
-        {/* Imagem completa com texto */}
-        <img 
-          src={canteAdoreComplete} 
-          alt="Cante e Adore - A Bíblia não é apenas um livro antigo" 
-          className="w-full h-auto"
-        />
+        {/* Imagem com texto sobreposto - igual à referência */}
+        <div className="relative overflow-hidden">
+          <img 
+            src={canteAdoreBg} 
+            alt="Casal adorando com fones de ouvido" 
+            className="w-full h-auto"
+          />
+          
+          {/* Gradiente e texto sobreposto */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/90 via-black/60 to-transparent px-6">
+            <h4 className="text-white text-3xl font-bold mb-8 text-center tracking-wide">
+              CANTE E<br />ADORE!
+            </h4>
+            
+            <div className="text-center text-white text-base leading-loose space-y-6 font-light">
+              <p>A Bíblia não é apenas um livro antigo!</p>
+              
+              <p>É uma fonte viva de sabedoria, consolo e direção.</p>
+              
+              <p>E agora, você pode experimentá-la em forma de<br />canção, com cada palavra transformada em louvor e<br />cada ensinamento em melodia.</p>
+              
+              <p>Você vai ouvir, cantar e viver as Escrituras.</p>
+              
+              <p>Uma jornada que começa nos Salmos e termina na<br />ressurreição de Cristo.</p>
+            </div>
+          </div>
+        </div>
 
         <a
           href="#checkout"
