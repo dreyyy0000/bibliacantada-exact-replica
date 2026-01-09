@@ -1,6 +1,7 @@
 import { Music, Mail, BookOpen, BookMarked } from "lucide-react";
 import iconExclamation from "@/assets/icon-exclamation.svg";
 import canteAdoreBg from "@/assets/cante-adore-bg.webp";
+import { smoothScrollTo } from "@/hooks/useSmoothScroll";
 
 const collections = [
   {
@@ -95,6 +96,11 @@ const getTextStyles = (variant: "cream" | "brown" | "orange" | "gold") => {
 };
 
 const AccessSection = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    smoothScrollTo("checkout", 1800);
+  };
+
   return (
     <section className="py-12 px-4">
       <h2 className="text-center text-foreground text-lg md:text-xl mb-2">
@@ -160,6 +166,7 @@ const AccessSection = () => {
             
             <a
               href="#checkout"
+              onClick={handleClick}
               className="btn-cta inline-block text-sm md:text-base mt-6"
             >
               Quero acessar a Bíblia em Música agora
