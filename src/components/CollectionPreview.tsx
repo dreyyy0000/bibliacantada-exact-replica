@@ -1,4 +1,5 @@
 import capaColecao from "@/assets/capa-colecao-completa.webp";
+import garantiaSelo from "@/assets/garantia-selo.png";
 
 const CollectionPreview = () => {
   return (
@@ -17,13 +18,13 @@ const CollectionPreview = () => {
             </div>
           </div>
           
-          {/* Guarantee Badge */}
+          {/* Guarantee Badge - Wax Seal */}
           <div className="absolute top-4 right-4 z-10">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex flex-col items-center justify-center text-black font-bold shadow-lg border-2 border-amber-300">
-              <span className="text-[10px] uppercase leading-none">Garantia</span>
-              <span className="text-xl leading-none">7</span>
-              <span className="text-[10px] uppercase leading-none">dias</span>
-            </div>
+            <img 
+              src={garantiaSelo} 
+              alt="Garantia 7 dias" 
+              className="w-20 h-auto drop-shadow-lg"
+            />
           </div>
           
           <img
