@@ -141,12 +141,12 @@ const AccessSection = () => {
           />
           
           {/* Todo o conteúdo sobreposto na imagem */}
-          <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-t from-black/95 via-black/70 to-transparent px-4 pt-24">
-            <h4 className="text-[#c8e600] text-2xl font-bold mb-6 text-left">
+          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black via-black/80 to-transparent px-6 pb-6 pt-32">
+            <h4 className="text-[#c8e600] text-2xl font-bold mb-4 text-center">
               CANTE E<br />ADORE!
             </h4>
             
-            <div className="text-left text-white text-sm leading-relaxed space-y-4">
+            <div className="text-center text-white text-sm leading-relaxed space-y-3">
               <p>A Bíblia não é apenas um livro antigo!</p>
               
               <p>É uma fonte viva de sabedoria, consolo e direção.</p>
