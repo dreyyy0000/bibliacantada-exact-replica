@@ -1,4 +1,5 @@
 import DynamicDate from "./DynamicDate";
+import colecaoCompletaPremium from "@/assets/colecao-completa-premium.webp";
 
 const PricingSection = () => {
   return (
@@ -11,9 +12,9 @@ const PricingSection = () => {
 
         <div className="mb-8">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=500&fit=crop"
+            src={colecaoCompletaPremium}
             alt="Coleção Completa"
-            className="w-48 md:w-64 mx-auto rounded-lg shadow-xl mb-6"
+            className="w-full max-w-md mx-auto mb-6"
           />
         </div>
 
