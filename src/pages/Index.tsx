@@ -29,8 +29,8 @@ const Index = () => {
       <CollectionPreview />
       <TestimonialsSection />
       <AccessSection />
-      <CanteAdoreSection />
       <NewConnectionSection />
+      <CanteAdoreSection />
       <WhatYouGetSection />
       <BonusSection />
       <GuaranteeSection />
