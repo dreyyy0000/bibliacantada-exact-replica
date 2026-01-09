@@ -140,13 +140,13 @@ const AccessSection = () => {
             className="w-full h-auto"
           />
           
-          {/* Gradiente e texto sobreposto */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/90 via-black/60 to-transparent px-6">
-            <h4 className="text-white text-3xl font-bold mb-8 text-center tracking-wide">
+          {/* Gradiente e texto sobreposto - alinhado ao final da imagem */}
+          <div className="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/90 via-black/60 to-transparent px-6 pb-4">
+            <h4 className="text-white text-3xl font-bold mb-6 text-center tracking-wide">
               CANTE E<br />ADORE!
             </h4>
             
-            <div className="text-center text-white text-base leading-loose space-y-6 font-light">
+            <div className="text-center text-white text-sm leading-relaxed space-y-4 font-light">
               <p>A Bíblia não é apenas um livro antigo!</p>
               
               <p>É uma fonte viva de sabedoria, consolo e direção.</p>
