@@ -1,4 +1,6 @@
 import { Music, Mail, BookOpen, BookMarked } from "lucide-react";
+import iconExclamation from "@/assets/icon-exclamation.svg";
+import canteAdoreBg from "@/assets/cante-adore-bg.webp";
 
 const collections = [
   {
@@ -118,13 +120,51 @@ const AccessSection = () => {
         ))}
       </div>
 
-      <div className="text-center mt-10">
-        <p className="text-foreground text-lg md:text-xl mb-4">
+      {/* Nova seção "Sua relação com a Bíblia" */}
+      <div className="text-center mt-16 max-w-md mx-auto">
+        <img src={iconExclamation} alt="" className="w-16 h-auto mx-auto mb-6" />
+        
+        <h3 className="text-white text-2xl font-bold leading-tight mb-4">
           Sua relação com a Bíblia nunca mais será a mesma!
-        </p>
-        <p className="text-muted-foreground text-base max-w-3xl mx-auto">
+        </h3>
+        
+        <p className="text-gray-300 text-sm leading-relaxed mb-10">
           A Bíblia em Música reúne as principais coleções devocionais da Bíblia em um só lugar — um material exclusivo, criado para te guiar em uma imersão espiritual sonora completa.
         </p>
+
+        {/* Seção Cante e Adore */}
+        <div className="relative rounded-t-3xl overflow-hidden mb-0">
+          <img 
+            src={canteAdoreBg} 
+            alt="Casal adorando com fones de ouvido" 
+            className="w-full h-auto"
+          />
+        </div>
+
+        <div className="bg-gradient-to-b from-[#3d2a1a] to-background pt-6 pb-4 -mt-1">
+          <h4 className="text-[#7cb342] text-xl font-bold mb-6">
+            CANTE E ADORE!
+          </h4>
+          
+          <div className="text-left text-gray-300 text-sm leading-relaxed space-y-4 px-2">
+            <p>A Bíblia não é apenas um livro antigo!</p>
+            
+            <p>É uma fonte viva de sabedoria, consolo e direção.</p>
+            
+            <p>E agora, você pode experimentá-la em forma de canção, com cada palavra transformada em louvor e cada ensinamento em melodia.</p>
+            
+            <p>Você vai ouvir, cantar e viver as Escrituras.</p>
+            
+            <p>Uma jornada que começa nos Salmos e termina na ressurreição de Cristo.</p>
+          </div>
+        </div>
+
+        <a
+          href="#checkout"
+          className="btn-cta inline-block text-sm md:text-base mt-6"
+        >
+          Quero acessar a Bíblia em Música agora
+        </a>
       </div>
     </section>
   );
