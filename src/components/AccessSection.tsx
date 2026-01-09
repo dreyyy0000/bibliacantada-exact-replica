@@ -132,30 +132,31 @@ const AccessSection = () => {
           A Bíblia em Música reúne as principais coleções devocionais da Bíblia em um só lugar — um material exclusivo, criado para te guiar em uma imersão espiritual sonora completa.
         </p>
 
-        {/* Seção Cante e Adore */}
-        <div className="relative rounded-t-3xl overflow-hidden mb-0">
+        {/* Seção Cante e Adore - Imagem com texto sobreposto */}
+        <div className="relative rounded-3xl overflow-hidden">
           <img 
             src={canteAdoreBg} 
             alt="Casal adorando com fones de ouvido" 
             className="w-full h-auto"
           />
-        </div>
-
-        <div className="bg-gradient-to-b from-[#3d2a1a] to-background pt-6 pb-4 -mt-1">
-          <h4 className="text-[#7cb342] text-xl font-bold mb-6">
-            CANTE E ADORE!
-          </h4>
           
-          <div className="text-left text-gray-300 text-sm leading-relaxed space-y-4 px-2">
-            <p>A Bíblia não é apenas um livro antigo!</p>
+          {/* Texto sobreposto na imagem */}
+          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pt-32">
+            <h4 className="text-[#7cb342] text-xl font-bold mb-4">
+              CANTE E ADORE!
+            </h4>
             
-            <p>É uma fonte viva de sabedoria, consolo e direção.</p>
-            
-            <p>E agora, você pode experimentá-la em forma de canção, com cada palavra transformada em louvor e cada ensinamento em melodia.</p>
-            
-            <p>Você vai ouvir, cantar e viver as Escrituras.</p>
-            
-            <p>Uma jornada que começa nos Salmos e termina na ressurreição de Cristo.</p>
+            <div className="text-left text-white text-sm leading-relaxed space-y-3">
+              <p>A Bíblia não é apenas um livro antigo!</p>
+              
+              <p>É uma fonte viva de sabedoria, consolo e direção.</p>
+              
+              <p>E agora, você pode experimentá-la em forma de canção, com cada palavra transformada em louvor e cada ensinamento em melodia.</p>
+              
+              <p>Você vai ouvir, cantar e viver as Escrituras.</p>
+              
+              <p>Uma jornada que começa nos Salmos e termina na ressurreição de Cristo.</p>
+            </div>
           </div>
         </div>
 
