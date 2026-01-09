@@ -4,7 +4,7 @@ interface CTAButtonProps {
   className?: string;
 }
 
-const CTAButton = ({ text, href = "https://ambienteseguro.org.ua/c/f3351a172d", className = "" }: CTAButtonProps) => {
+const CTAButton = ({ text, href = "#checkout", className = "" }: CTAButtonProps) => {
   return (
     <a
       href={href}

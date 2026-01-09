@@ -27,7 +27,7 @@ const CanteAdoreSection = () => {
         </p>
 
         <a
-          href="https://ambienteseguro.org.ua/c/f3351a172d"
+          href="#checkout"
           className="btn-cta inline-block mt-8 text-sm md:text-base"
         >
           Quero acessar a Bíblia em Música agora
