@@ -137,7 +137,7 @@ const AccessSection = () => {
             src={canteAdoreBg} 
             alt="Casal adorando com fones de ouvido" 
             className="w-full h-auto object-cover object-top"
-            style={{ marginTop: '-100px' }}
+            style={{ marginTop: '-100px', marginBottom: '-150px' }}
           />
           
           {/* Gradiente e texto sobreposto - alinhado ao final da imagem */}
