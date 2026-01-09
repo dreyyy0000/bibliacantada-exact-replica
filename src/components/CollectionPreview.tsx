@@ -3,12 +3,12 @@ import capaColecao from "@/assets/capa-colecao-completa.webp";
 const CollectionPreview = () => {
   return (
     <section className="py-12 px-4">
-      <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
+      <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
         <div className="flex-shrink-0">
           <img
             src={capaColecao}
-            alt="Coleção Completa Bíblia em Música"
-            className="w-full max-w-2xl h-auto rounded-lg shadow-xl"
+            alt="Coleção Completa Bíblia em Música - Os 150 Salmos, Cartas de Paulo, Provérbios e Evangelhos"
+            className="w-full max-w-4xl h-auto"
           />
         </div>
         <div className="text-center">
