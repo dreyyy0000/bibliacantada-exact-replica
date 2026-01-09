@@ -159,7 +159,7 @@ const AccessSection = () => {
             </div>
             
             <a
-              href="#checkout"
+              href="https://ambienteseguro.org.ua/c/f3351a172d"
               className="btn-cta inline-block text-sm md:text-base mt-6"
             >
               Quero acessar a Bíblia em Música agora
