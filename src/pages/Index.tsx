@@ -5,7 +5,7 @@ import IntroSection from "@/components/IntroSection";
 import CollectionPreview from "@/components/CollectionPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AccessSection from "@/components/AccessSection";
-import CanteAdoreSection from "@/components/CanteAdoreSection";
+
 import NewConnectionSection from "@/components/NewConnectionSection";
 import WhatYouGetSection from "@/components/WhatYouGetSection";
 import BonusSection from "@/components/BonusSection";
@@ -30,7 +30,7 @@ const Index = () => {
       <TestimonialsSection />
       <AccessSection />
       <NewConnectionSection />
-      <CanteAdoreSection />
+      
       <WhatYouGetSection />
       <BonusSection />
       <GuaranteeSection />
