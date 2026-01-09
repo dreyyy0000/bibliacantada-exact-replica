@@ -141,7 +141,7 @@ const AccessSection = () => {
           />
           
           {/* Gradiente e texto sobreposto - alinhado ao final da imagem */}
-          <div className="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/90 via-black/60 to-transparent px-6 pb-4">
+          <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/90 via-black/60 to-transparent px-6">
             <h4 className="text-white text-3xl font-bold mb-6 text-center tracking-wide">
               CANTE E<br />ADORE!
             </h4>
