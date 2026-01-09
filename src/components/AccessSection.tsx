@@ -1,4 +1,4 @@
-import { Music, BookOpen, ScrollText, BookMarked } from "lucide-react";
+import { Music, Mail, BookOpen, BookMarked } from "lucide-react";
 
 const collections = [
   {
@@ -8,7 +8,7 @@ const collections = [
     variant: "dark" as const,
   },
   {
-    icon: ScrollText,
+    icon: Mail,
     title: "Todas as Cartas de Paulo em Música",
     description: "70 canções devocionais com os ensinamentos do apóstolo Paulo, traduzindo seus conselhos, exortações e revelações em melodias poderosas.",
     variant: "light" as const,
@@ -30,44 +30,44 @@ const collections = [
 const getCardStyles = (variant: "dark" | "light" | "gold") => {
   switch (variant) {
     case "dark":
-      return "bg-[#3d2a1a] text-white";
+      return "bg-[#5c3d2e]";
     case "light":
-      return "bg-[#f5e6d3] text-[#3d2a1a]";
+      return "bg-[#f5efe6]";
     case "gold":
-      return "bg-gradient-to-br from-amber-500 to-amber-600 text-[#3d2a1a]";
+      return "bg-[#d4a84b]";
   }
 };
 
 const getIconStyles = (variant: "dark" | "light" | "gold") => {
   switch (variant) {
     case "dark":
-      return "text-amber-400";
+      return "text-[#d4a84b]";
     case "light":
-      return "text-amber-600";
+      return "text-[#5c3d2e]";
     case "gold":
-      return "text-[#3d2a1a]";
+      return "text-[#5c3d2e]";
   }
 };
 
 const getTitleStyles = (variant: "dark" | "light" | "gold") => {
   switch (variant) {
     case "dark":
-      return "text-amber-400";
+      return "text-[#d4a84b]";
     case "light":
-      return "text-[#3d2a1a]";
+      return "text-[#5c3d2e]";
     case "gold":
-      return "text-[#3d2a1a]";
+      return "text-[#5c3d2e]";
   }
 };
 
 const getTextStyles = (variant: "dark" | "light" | "gold") => {
   switch (variant) {
     case "dark":
-      return "text-white/80";
+      return "text-[#f5efe6]";
     case "light":
-      return "text-[#3d2a1a]/80";
+      return "text-[#5c3d2e]";
     case "gold":
-      return "text-[#3d2a1a]/80";
+      return "text-[#5c3d2e]";
   }
 };
 
@@ -78,19 +78,19 @@ const AccessSection = () => {
         <span className="font-bold gold-text">Tenha acesso exclusivo</span> de forma organizada, fácil e prática a:
       </h2>
 
-      <div className="max-w-md mx-auto mt-10 flex flex-col gap-4">
+      <div className="max-w-sm mx-auto mt-10 flex flex-col gap-4">
         {collections.map((collection, index) => (
           <div
             key={index}
-            className={`rounded-xl p-6 ${getCardStyles(collection.variant)}`}
+            className={`rounded-2xl p-5 ${getCardStyles(collection.variant)}`}
           >
-            <div className="flex items-center gap-3 mb-3">
-              <collection.icon className={`w-8 h-8 ${getIconStyles(collection.variant)}`} />
-              <h3 className={`font-bold text-lg ${getTitleStyles(collection.variant)}`}>
-                {collection.title}
-              </h3>
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${collection.variant === 'dark' ? 'bg-[#d4a84b]' : collection.variant === 'light' ? 'bg-[#5c3d2e]' : 'bg-[#5c3d2e]'}`}>
+              <collection.icon className={`w-5 h-5 ${collection.variant === 'dark' ? 'text-[#5c3d2e]' : 'text-[#f5efe6]'}`} />
             </div>
-            <p className={`text-sm leading-relaxed ${getTextStyles(collection.variant)}`}>
+            <h3 className={`font-bold text-base leading-tight mb-2 ${getTitleStyles(collection.variant)}`}>
+              {collection.title}
+            </h3>
+            <p className={`text-xs leading-relaxed opacity-90 ${getTextStyles(collection.variant)}`}>
               {collection.description}
             </p>
           </div>
