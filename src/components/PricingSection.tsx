@@ -50,7 +50,7 @@ const PricingSection = () => {
           </div>
 
           <a
-            href="https://ambienteseguro.org.ua/c/f3351a172d"
+            href="https://pay.kiwify.com.br/TVhH9Gl"
             className="btn-cta block w-full text-lg animate-pulse-glow"
           >
             Eu quero agora
